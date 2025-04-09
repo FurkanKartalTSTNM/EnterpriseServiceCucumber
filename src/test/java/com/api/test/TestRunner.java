@@ -16,11 +16,9 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 		}
 		,features= {"src/test/resources/features"}
 		,glue = {"com.api.stepdefinition"}
-		//,dryRun = true
 		,monochrome = true
 		,snippets = SnippetType.CAMELCASE
 		,tags = "@bookerAPI"
-		//,publish = true
 		)
 public class TestRunner {
 
