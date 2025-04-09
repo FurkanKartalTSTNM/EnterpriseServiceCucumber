@@ -8,6 +8,7 @@ Feature: To view the restful-booker booking details
     Then user should get the response code 200
     And user should see all the booking IDs
 
+  @Deneme01
   Scenario: To view booking details
     Given user has access to endpoint "/booking"
     When user makes a request to view booking IDs
@@ -15,6 +16,7 @@ Feature: To view the restful-booker booking details
     Then user should get the response code 200
     And user validates the response with JSON schema "bookingDetailsSchema.json"
 
+  @Deneme02
   Scenario Outline: To view all the booking IDs by booking dates
     Given user has access to endpoint "/booking"
     When user makes a request to view booking IDs from "<checkin>" to "<checkout>"
@@ -26,6 +28,7 @@ Feature: To view the restful-booker booking details
       | 2018-01-01 | 2021-12-31 |
       | 2010-01-01 | 2020-12-31 |
 
+  @Deneme03
   Scenario: To view all the booking IDs by booking names
     Given user has access to endpoint "/booking"
     When user makes a request to view booking IDs
@@ -35,12 +38,14 @@ Feature: To view the restful-booker booking details
     And user should get the response code 200
     And user should see all the booking IDs
 
+  @Deneme04
   Scenario: To confirm whether the API is up and running
     Given user has access to endpoint "/ping"
     When user makes a request to check the health of booking service
     Then user should get the response code 201
 
 
+  @Deneme05
   Scenario: fail
     Given user has access to endpoint "/ping"
     When user makes a request to check the health of booking service
