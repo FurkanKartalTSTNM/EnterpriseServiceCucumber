@@ -8,18 +8,10 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		plugin = {"pretty:target/cucumber/cucumber.txt",
-				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
-				//"html:target/cucumber/report",
-				"json:target/cucumber/cucumber.json",
-				"com.api.utils.MyTestListener"
-		}
-		,features= {"src/test/resources/features"}
-		,glue = {"com.api.stepdefinition"}
-		,monochrome = true
-		,snippets = SnippetType.CAMELCASE
-		,tags = "@bookerAPI"
-		)
+		features = "src/test/resources/features",
+		glue = {"com.api.stepdefs", "com.api.utils"},
+		plugin = {"pretty", "html:target/cucumber-report"},
+		monochrome = true
+)
 public class TestRunner {
-
 }
