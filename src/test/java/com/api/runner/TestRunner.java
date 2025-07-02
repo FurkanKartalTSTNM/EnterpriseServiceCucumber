@@ -1,4 +1,4 @@
-package com.api.test;
+package com.api.runner;
 
 import org.junit.runner.RunWith;
 
